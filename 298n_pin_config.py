@@ -1,4 +1,4 @@
-<p>import RPi.GPIO as GPIO
+import RPi.GPIO as GPIO
  
 # Use GPIO numbers not pin numbers
 GPIO.setmode(GPIO.BCM)
