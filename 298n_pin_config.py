@@ -11,4 +11,4 @@ GPIO.setup(8, GPIO.OUT)
 input_value = GPIO.input(7)
  
 # output to GPIO8
-GPIO.output(8, True)</p>
+GPIO.output(8, True)
