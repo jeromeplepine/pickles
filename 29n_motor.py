@@ -3,7 +3,6 @@ import sys
 import time
 import RPi.GPIO as GPIO
 
-
 GPIO.cleanup()
 
 # Define GPIO signals to use
@@ -24,18 +23,18 @@ pwm.start(0)
 def forward(x):
 	pwm.start(0)
 	time.sleep(2)
-    GPIO.output(StepPinForward, GPIO.HIGH)
-    print "forwarding running  motor "
-    GPIO.output(StepPinForward, GPIO.LOW)
-    pwm.ChangeDutyCycle(x)
+	GPIO.output(StepPinForward, GPIO.HIGH)
+	print "forwarding running  motor "
+	GPIO.output(StepPinForward, GPIO.LOW)
+	pwm.ChangeDutyCycle(x)
 
 def reverse(x):
 	pwm.start(0)
 	time.sleep(2)
-    GPIO.output(StepPinBackward, GPIO.HIGH)
-    print "backwarding running motor"
-    GPIO.output(StepPinBackward, GPIO.LOW)
-    pwm.ChangeDutyCycle(x)
+	GPIO.output(StepPinBackward, GPIO.HIGH)
+	print "backwarding running motor"
+	GPIO.output(StepPinBackward, GPIO.LOW)
+	pwm.ChangeDutyCycle(x)
 
 def stop():
 	pwm.stop
