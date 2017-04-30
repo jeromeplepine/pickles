@@ -18,6 +18,7 @@ GPIO.setmode(GPIO.BCM)
 GPIO.setup(StepPinForward, GPIO.OUT)
 GPIO.setup(StepPinBackward, GPIO.OUT)
 GPIO.setup(PwmPin, GPIO.OUT)
+pwm = GPIO.PWM(PwmPin, 500)
 pwm.start(0)
 
 def forward(x):
