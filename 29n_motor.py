@@ -26,7 +26,7 @@ def forward(x):
 	time.sleep(2)
 	GPIO.output(StepPinForward, GPIO.HIGH)
 	print "forwarding running  motor "
-	GPIO.output(StepPinForward, GPIO.LOW)
+	GPIO.output(StepPinBackward, GPIO.LOW)
 	pwm.ChangeDutyCycle(x)
 
 def reverse(x):
@@ -34,7 +34,7 @@ def reverse(x):
 	time.sleep(2)
 	GPIO.output(StepPinBackward, GPIO.HIGH)
 	print "backwarding running motor"
-	GPIO.output(StepPinBackward, GPIO.LOW)
+	GPIO.output(StepPinForward, GPIO.LOW)
 	pwm.ChangeDutyCycle(x)
 
 def stop():
