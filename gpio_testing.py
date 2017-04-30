@@ -12,11 +12,11 @@ def config_out(x):
 	GPIO.setup(x, GPIO.OUT)
 
 
-def output_high():
+def output_high(x):
 	GPIO.output(x, GPIO.HIGH)
 	print"HIgh output on selected BCM pin"
 
-def output_low():
+def output_low(x):
 	GPIO.output(x, GPIO.LOW)
 	print"HIgh output on selected BCM pin"
 
